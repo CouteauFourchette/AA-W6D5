@@ -38,6 +38,7 @@
         </li>
         <li><a href="#">Profile</a></li>
         <li><a href="#">Settings</a></li>
+        <li><a href="#" class="js-modal-open">Sign In</a></li>
       </ul>
 
     </nav>
@@ -231,6 +232,53 @@
     </ul>
 
   </footer>
+
+  <section class="model">
+    <section class="model-screen">
+
+    </section>
+    <section class="model-form">
+      <form class="form">
+
+        <fieldset class="form-fieldset">
+          <h1><a href="#" class="js-modal-close">&times;</a></h1>
+          <h2>Welcome</h2>
+          <p>Please sign in to continue.</p>
+          <div class="input">
+            <label for="form-title">Email</label>
+            <input id="form-title" type="text" value="sennacy@appacademy.io">
+          </div>
+          <div class="input">
+            <label for="form-title">Password</label>
+            <input id="form-title" type="password" value="123456">
+          </div>
+
+
+          <div class="submit">
+            <button>Sign In</button>
+            <span class="button-alternative">or <strong>Cancel</strong></span>
+          </div>
+
+        </fieldset>
+      </form>
+    </section>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(function(){
+
+    $("body").on("click", ".js-modal-open", function(event){
+      event.preventDefault();
+      $(".model").addClass("is-open");
+    });
+
+    $("body").on("click", ".js-modal-close", function(event){
+      event.preventDefault();
+      $(".model").removeClass("is-open");
+    });
+
+  });
+  </script>
 
 </body>
 </html>
