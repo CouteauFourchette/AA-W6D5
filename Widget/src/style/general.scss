@@ -1,3 +1,6 @@
-body {
-  background: red;
-}
+@import "reset.scss";
+@import "colors.scss"; 
+@import "widget.scss"; 
+@import "components/weather.scss"; 
+@import "components/tabs.scss"; 
+@import "components/clock.scss";

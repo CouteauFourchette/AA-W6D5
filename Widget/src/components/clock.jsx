@@ -21,12 +21,12 @@ class Clock extends React.Component{
 
   render() {
     return (
-      <div className="contain">
+      <div className="widget">
         <h1>Clock</h1>
-        <div className="contain-content clock-container">
+        <div className="widget-content clock-container">
           <ul className="clock-row">
             <li>Time:</li>
-            <li>{this.state.time.getHours()} : {this.state.time.getMinutes()} : {this.state.time.getSeconds()}</li>
+            <li> {this.state.time.toTimeString().slice(0,8)} </li>
           </ul>
           <ul className="clock-row">
             <li>Date:</li>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Weather extends React.Component{
+class Weather extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -15,7 +15,6 @@ class Weather extends React.Component{
     };
 
     navigator.geolocation.getCurrentPosition(this.getWeather.bind(this), console.log, options);
-    // 6dbaf7780d5dd1bb47fd0365eab5223d
   }
 
   getWeather(pos) {
@@ -25,7 +24,7 @@ class Weather extends React.Component{
     const that = this;
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
-      if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
         if (xmlhttp.status == 200) {
           const apiResponse = JSON.parse(xmlhttp.response);
 
@@ -36,7 +35,7 @@ class Weather extends React.Component{
             temp: results.item.condition.temp,
             description: results.item.condition.text
           });
-          //  document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+
         }
         else if (xmlhttp.status == 400) {
           alert('There was an error 400');
@@ -52,7 +51,22 @@ class Weather extends React.Component{
   }
 
   render() {
-    return (<div>Weather {this.state.temp} {this.state.description} {this.state.location}</div>);
+    const temp = this.state.temp ? this.state.temp + '°F' : '';
+    const description = this.state.description ? 'is ' + this.state.description : '';
+    return (
+      <div className='widget'>
+        <h1>Weather</h1>
+        <div className='widget-content weather-container'>
+          <span className='temp'>
+            { temp }
+          </span>
+          <ul>
+            <li>{ this.state.location }</li>
+            <li>{ description }</li>
+          </ul>
+        </div>
+      </div>
+    );
   }
 }
 

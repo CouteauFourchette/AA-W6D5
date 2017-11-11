@@ -1,0 +1,17 @@
+.widget {
+  width: 600px;
+  margin: auto;
+
+  h1 {
+    font-size: 24px;
+    margin: 15px 0px 5px 0px;
+  }
+}
+
+.widget-content {
+  min-height: 150px;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: $blue;
+  color: white;
+}

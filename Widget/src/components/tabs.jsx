@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Header = ({ id, title, clickCompletion, selected}) => {
+const Header = ({ id, title, onClick, selected}) => {
   return (
-    <li tabid={ id } onClick={ clickCompletion } className={selected} >{ title }</li>
+    <li tabid={ id } onClick={ onClick } className={selected} >{ title }</li>
   );
 };
 
@@ -34,22 +34,23 @@ class Tabs extends React.Component {
 
     this.makeSelected();
     return (
-      <div className='contain'>
+      <div className='widget'>
         <h1>Tabs</h1>
-        <div className='contain-content tabs-container'>
-          <ul className='tabs-header'>
+        <ul className='tabs-header'>
           {
             this.tabs.map((el, idx) => (
               <Header
                 key={el.title}
                 id={idx}
                 title={el.title}
-                clickCompletion= { this.changeTab }
-                selected= { el.selected }
+                onClick={this.changeTab}
+                selected={el.selected}
               />
             ))
           }
-          </ul>
+        </ul>
+        <div className='widget-content tabs-container'>
+
           <article className='tabs-content'> { this.tabs[this.state.selectedTab].content } </article>
         </div>
       </div>
