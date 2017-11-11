@@ -26,7 +26,6 @@ class Root extends React.Component {
   render() {
     return (
       <div className="main">
-        <h1 className="main-title">Widgets</h1>
         <Clock />
         <Weather />
         <div className="widget-group">

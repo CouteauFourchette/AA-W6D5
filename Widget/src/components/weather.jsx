@@ -8,6 +8,7 @@ class Weather extends React.Component {
       location: '',
       temp: '',
       description: '',
+      loading: 'Loading...',
     };
 
     const options = {
@@ -35,6 +36,7 @@ class Weather extends React.Component {
             location: results.location.city,
             temp: results.item.condition.temp,
             description: results.item.condition.text,
+            loading: '',
           });
         } else if (xmlhttp.status === 400) {
           alert('There was an error 400');
@@ -55,6 +57,7 @@ class Weather extends React.Component {
       <div className="widget-big">
         <h1>Weather</h1>
         <div className="widget-content weather-container">
+          <p className="loading">{this.state.loading}</p>
           <span className="temp">
             { temp }
           </span>

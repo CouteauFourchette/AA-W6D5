@@ -1,17 +1,5 @@
 $pink: #E80C7A;
 
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
 
 ul.tabs-header {
   display: flex;
@@ -30,16 +18,11 @@ ul.tabs-header {
     width: 100%;
     color: $pink;
     margin-bottom: 10px;
-  }
-
-  button:hover {
-    // background-color: lighten($pink, 30%);
-    // color: white;
-    // border: 1px solid $pink;
-    display: block;
-    animation-duration: 1s;
-    // animation-fill-mode: both;
-    animation-name: pulse;
+    &:hover {
+      display: block;
+      animation-duration: 0.6s;
+      animation-name: pulse;
+    }
   }
 
   button.selected {
@@ -47,6 +30,10 @@ ul.tabs-header {
     color: white;
     border: 1px solid $pink;
     cursor: default;
+
+    &:hover {
+      animation-duration: 0s;
+    }
   }
 
 

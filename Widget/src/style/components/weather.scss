@@ -9,5 +9,11 @@
   .temp {
     font-size: 100px;
   }
+
+  .loading {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
 }
 

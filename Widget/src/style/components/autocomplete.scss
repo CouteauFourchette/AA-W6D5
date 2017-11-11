@@ -1,4 +1,4 @@
-$green: #99E873;
+$green: #3BB260;
 
 .autocomplete-container {
   @include widget-box($green);
@@ -9,11 +9,15 @@ $green: #99E873;
     width: 98%;
     border: 1px solid $green;
     padding: 5px;
+    &:focus {
+      border: 1px solid darken($green, 20%);
+    }
   }
   ul {
     list-style: circle;
     margin-top: 10px;
     padding-left: 20px;
+
   }
 
   button {

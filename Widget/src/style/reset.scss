@@ -50,8 +50,14 @@ body {
 .main {
   width: 600px;
   margin: auto;
-  .main-title {
+}
+
+.main-title {
+    padding: 10px;
     font-size: 60px;
     text-align: center;
-  }
+    width: 100%;
+    color: white;
+    background-color:rgb(255, 78, 78);
+    margin-bottom: 20px;
 }

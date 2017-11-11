@@ -42,9 +42,23 @@ body {
 .main {
   width: 600px;
   margin: auto; }
-  .main .main-title {
-    font-size: 60px;
-    text-align: center; }
+
+.main-title {
+  padding: 10px;
+  font-size: 60px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: #ff4e4e;
+  margin-bottom: 20px; }
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    transform: scale3d(1, 1, 1); } }
 
 [class^="widget-"] h1 {
   font-size: 24px;
@@ -72,14 +86,10 @@ body {
   font-size: 40px; }
   .weather-container .temp {
     font-size: 100px; }
-
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1); }
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05); }
-  to {
-    transform: scale3d(1, 1, 1); } }
+  .weather-container .loading {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; }
 
 ul.tabs-header {
   display: flex;
@@ -97,15 +107,17 @@ ul.tabs-header {
     width: 100%;
     color: #E80C7A;
     margin-bottom: 10px; }
-  ul.tabs-header button:hover {
-    display: block;
-    animation-duration: 1s;
-    animation-name: pulse; }
+    ul.tabs-header button:hover {
+      display: block;
+      animation-duration: 0.6s;
+      animation-name: pulse; }
   ul.tabs-header button.selected {
     background-color: #E80C7A;
     color: white;
     border: 1px solid #E80C7A;
     cursor: default; }
+    ul.tabs-header button.selected:hover {
+      animation-duration: 0s; }
 
 .tabs-container {
   border-top: 6px solid #E80C7A;
@@ -123,15 +135,17 @@ ul.tabs-header {
     font-size: 55px; }
 
 .autocomplete-container {
-  border-top: 6px solid #99E873;
-  box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 rgba(153, 232, 115, 0.1);
-  color: #99E873; }
+  border-top: 6px solid #3BB260;
+  box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 rgba(59, 178, 96, 0.1);
+  color: #3BB260; }
   .autocomplete-container input {
     background-color: white;
-    color: #99E873;
+    color: #3BB260;
     width: 98%;
-    border: 1px solid #99E873;
+    border: 1px solid #3BB260;
     padding: 5px; }
+    .autocomplete-container input:focus {
+      border: 1px solid #226537; }
   .autocomplete-container ul {
     list-style: circle;
     margin-top: 10px;
@@ -139,7 +153,7 @@ ul.tabs-header {
   .autocomplete-container button {
     width: 100%; }
   .autocomplete-container button:hover {
-    background-color: #99E873;
+    background-color: #3BB260;
     color: white; }
 
 /*# sourceMappingURL=main.css.map*/
