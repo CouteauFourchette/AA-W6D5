@@ -65,7 +65,7 @@ ul.tabs-header {
   display: flex;
   justify-content: center;
   font-size: 19px; }
-  ul.tabs-header li {
+  ul.tabs-header button {
     display: block;
     border-radius: 15px 15px 0px 0px;
     width: 30%;
@@ -75,11 +75,11 @@ ul.tabs-header {
     background-color: white;
     border: 1px solid #00C5FF;
     color: #00C5FF; }
-  ul.tabs-header li:hover {
+  ul.tabs-header button:hover {
     background-color: #99e8ff;
     color: white;
     border: 1px solid #00C5FF; }
-  ul.tabs-header li.selected {
+  ul.tabs-header button.selected {
     background-color: #00C5FF;
     color: white;
     border: 1px solid #00C5FF; }

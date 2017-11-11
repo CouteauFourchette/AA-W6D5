@@ -1,14 +1,10 @@
 import React from 'react';
 
-class Clock extends React.Component{
+class Clock extends React.Component {
   constructor() {
     super();
     this.state = { time: new Date() };
     this.tick = this.tick.bind(this);
-  }
-
-  tick() {
-    this.setState({ time: new Date() });
   }
 
   componentDidMount() {
@@ -19,6 +15,10 @@ class Clock extends React.Component{
     window.clearInterval(this.interval);
   }
 
+  tick() {
+    this.setState({ time: new Date() });
+  }
+
   render() {
     return (
       <div className="widget">
@@ -26,7 +26,7 @@ class Clock extends React.Component{
         <div className="widget-content clock-container">
           <ul className="clock-row">
             <li>Time:</li>
-            <li> {this.state.time.toTimeString().slice(0,8)} </li>
+            <li> {this.state.time.toTimeString().slice(0, 8)} </li>
           </ul>
           <ul className="clock-row">
             <li>Date:</li>

@@ -1,7 +1,7 @@
 import React from 'react';
-import Clock from './components/clock.jsx';
-import Tabs from './components/tabs.jsx';
-import Weather from './components/weather.jsx';
+import Clock from './components/clock';
+import Tabs from './components/tabs';
+import Weather from './components/weather';
 
 class Root extends React.Component {
   constructor(props) {
