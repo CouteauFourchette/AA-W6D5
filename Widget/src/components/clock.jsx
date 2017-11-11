@@ -21,7 +21,7 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div className="widget">
+      <div className="widget-big">
         <h1>Clock</h1>
         <div className="widget-content clock-container">
           <ul className="clock-row">

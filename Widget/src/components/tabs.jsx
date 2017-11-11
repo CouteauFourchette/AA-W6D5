@@ -21,22 +21,22 @@ class Tabs extends React.Component {
 
   render() {
     return (
-      <div className="widget">
+      <div className="widget-small">
         <h1>Tabs</h1>
-        <ul className="tabs-header">
-          {
-            this.tabs.map((el, idx) => (
-              <Header
-                key={el.title}
-                id={idx}
-                title={el.title}
-                onClick={this.changeTab}
-                selected={this.state.selectedTab}
-              />
-            ))
-          }
-        </ul>
         <div className="widget-content tabs-container">
+          <ul className="tabs-header">
+            {
+              this.tabs.map((el, idx) => (
+                <Header
+                  key={el.title}
+                  id={idx}
+                  title={el.title}
+                  onClick={this.changeTab}
+                  selected={this.state.selectedTab}
+                />
+              ))
+            }
+          </ul>
           <article className="tabs-content"> { this.tabs[this.state.selectedTab].content } </article>
         </div>
       </div>

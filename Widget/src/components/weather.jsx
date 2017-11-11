@@ -52,7 +52,7 @@ class Weather extends React.Component {
     const temp = this.state.temp ? `${this.state.temp}°F` : '';
     const description = this.state.description ? `is ${this.state.description}` : '';
     return (
-      <div className="widget">
+      <div className="widget-big">
         <h1>Weather</h1>
         <div className="widget-content weather-container">
           <span className="temp">

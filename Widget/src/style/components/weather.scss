@@ -1,4 +1,6 @@
 .weather-container {
+  @include widget-box(rgb(235, 176, 47));
+
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -1,17 +1,29 @@
-.widget {
-  width: 600px;
-  margin: auto;
-
+[class^="widget-"] {
   h1 {
     font-size: 24px;
-    margin: 15px 0px 5px 0px;
+    margin-bottom: 5px;
   }
+}
+
+.widget-small {
+  width: 280px;
+}
+
+.widget-group {
+  display: flex;
+  justify-content: space-between;
+  // align-items: flex-start;
 }
 
 .widget-content {
   min-height: 150px;
-  border-radius: 15px;
   padding: 15px;
-  background-color: $blue;
-  color: white;
+  margin-bottom: 40px;
+  
+}
+
+@mixin widget-box($color) {
+  border-top: 6px solid $color;
+  box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 transparentize($color, 0.9);
+  color:$color;
 }

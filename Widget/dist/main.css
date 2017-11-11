@@ -1,4 +1,4 @@
-html, body, header, nav, h1, a,
+@import url(https://fonts.googleapis.com/css?family=Quicksand);html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
 section, img, div, h2, p, form,
 fieldset, label, input, textarea,
@@ -14,9 +14,6 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent; }
-
-body {
-  font-family: 'Dosis', sans-serif; }
 
 ul {
   list-style: none; }
@@ -39,21 +36,36 @@ button,
 input[type="submit"] {
   cursor: pointer; }
 
-.widget {
+body {
+  font-family: 'Quicksand', sans-serif; }
+
+.main {
   width: 600px;
   margin: auto; }
-  .widget h1 {
-    font-size: 24px;
-    margin: 15px 0px 5px 0px; }
+  .main .main-title {
+    font-size: 60px;
+    text-align: center; }
+
+[class^="widget-"] h1 {
+  font-size: 24px;
+  margin-bottom: 5px; }
+
+.widget-small {
+  width: 280px; }
+
+.widget-group {
+  display: flex;
+  justify-content: space-between; }
 
 .widget-content {
   min-height: 150px;
-  border-radius: 15px;
   padding: 15px;
-  background-color: #00C5FF;
-  color: white; }
+  margin-bottom: 40px; }
 
 .weather-container {
+  border-top: 6px solid #ebb02f;
+  box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 rgba(235, 176, 47, 0.1);
+  color: #ebb02f;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -61,35 +73,73 @@ input[type="submit"] {
   .weather-container .temp {
     font-size: 100px; }
 
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
 ul.tabs-header {
   display: flex;
   justify-content: center;
-  font-size: 19px; }
+  font-size: 19px;
+  width: 100%; }
   ul.tabs-header button {
     display: block;
-    border-radius: 15px 15px 0px 0px;
-    width: 30%;
-    margin-bottom: -1px;
+    padding: 5px;
     cursor: pointer;
     text-align: center;
     background-color: white;
-    border: 1px solid #00C5FF;
-    color: #00C5FF; }
+    margin: 0px -1px 11px;
+    border: 1px solid #E80C7A;
+    width: 100%;
+    color: #E80C7A;
+    margin-bottom: 10px; }
   ul.tabs-header button:hover {
-    background-color: #99e8ff;
-    color: white;
-    border: 1px solid #00C5FF; }
+    display: block;
+    animation-duration: 1s;
+    animation-name: pulse; }
   ul.tabs-header button.selected {
-    background-color: #00C5FF;
+    background-color: #E80C7A;
     color: white;
-    border: 1px solid #00C5FF; }
+    border: 1px solid #E80C7A;
+    cursor: default; }
 
 .tabs-container {
+  border-top: 6px solid #E80C7A;
+  box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 rgba(232, 12, 122, 0.1);
+  color: #E80C7A;
   font-size: 20px; }
 
-.clock-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 55px; }
+.clock-container {
+  border-top: 6px solid #2f87eb;
+  box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 rgba(47, 135, 235, 0.1);
+  color: #2f87eb; }
+  .clock-container .clock-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 55px; }
+
+.autocomplete-container {
+  border-top: 6px solid #99E873;
+  box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 rgba(153, 232, 115, 0.1);
+  color: #99E873; }
+  .autocomplete-container input {
+    background-color: white;
+    color: #99E873;
+    width: 98%;
+    border: 1px solid #99E873;
+    padding: 5px; }
+  .autocomplete-container ul {
+    list-style: circle;
+    margin-top: 10px;
+    padding-left: 20px; }
+  .autocomplete-container button {
+    width: 100%; }
+  .autocomplete-container button:hover {
+    background-color: #99E873;
+    color: white; }
 
 /*# sourceMappingURL=main.css.map*/
